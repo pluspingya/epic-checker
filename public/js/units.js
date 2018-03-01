@@ -37,7 +37,7 @@ class Units {
     }
   }
 
-  reset(state) {    
+  reset(state) {
     this.units.forEach(units => units.forEach(unit => unit.destroy()));
     this.state = state;
     this.instantiate();
@@ -47,7 +47,7 @@ class Units {
     this.group.sort('y', Phaser.Group.SORT_ASCENDING);
   }
 
-  getTilesAtCoordinates(coordinates) {
+  getUnitsAtCoordinates(coordinates) {
     var ret = [];
     coordinates.forEach(coordinate => {
       var unit = this.units[0].find(u => u.coordinate.row == coordinate.row && u.coordinate.column == coordinate.column)

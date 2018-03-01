@@ -24,9 +24,9 @@ class Table {
   }
 
   instantiate() {
-    this.group.tiles = this.game.add.group();
-    this.group.guides = this.game.add.group();
-    this.group.units = this.game.add.group();
+    if (this.group.tiles == null)   this.group.tiles = this.game.add.group();
+    if (this.group.guides == null)  this.group.guides = this.game.add.group();
+    if (this.group.units == null)   this.group.units =  this.game.add.group();
 
     this.tiles = [];
 
@@ -53,6 +53,25 @@ class Table {
 
   }
 
+  reset(state) {
+    this.tiles.forEach(row => row.forEach(tile => {
+      if (tile != null)
+        tile.destroy();
+      }));
+    this.state = state;
+    this.instantiate();
+  }
+
+  quakeAndCollapse({quakeCoordinates, collapseCoordinates}) {
+    var quakeTiles = this.getTilesAtCoordinates(quakeCoordinates);
+    quakeTiles.forEach(tile => tile.quake());
+    var collapseTiles = this.getTilesAtCoordinates(collapseCoordinates);
+    collapseTiles.forEach(tile => {
+      this.tiles[tile.coordinate.row][tile.coordinate.column] = null;
+      tile.collapse();
+    });
+  }
+
   setPosition(x, y) {
     [
       this.group.tiles,
@@ -69,6 +88,12 @@ class Table {
       }
     }
     return null;
+  }
+
+  getTilesAtCoordinates(coordinates) {
+    let ret = [];
+    coordinates.forEach(coordinate => ret.push(this.tiles[coordinate.row][coordinate.column]));
+    return ret;
   }
 
   getDisplaySize() {

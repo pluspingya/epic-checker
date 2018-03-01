@@ -37,10 +37,39 @@ class Tile extends Phaser.Sprite {
       (column * halfTileSize.width - row * halfTileSize.width) + (tableSize.row * halfTileSize.width),
       (column * halfTileSize.height + row * halfTileSize.height) + this.height * 0.5
     );
+    this.tween = null;
     if (group)
       group.add(this);
     else
       game.add.existing(this);
+  }
+
+  quake() {
+    if (this.tween) {
+      this.tween.stop();
+      this.tween = null;
+    }
+    this.tween = this.game.add.tween(this)
+    .to({angle:-5}, 100, Phaser.Easing.Linear.None, false)
+    .to({angle: 0}, 100, Phaser.Easing.Bounce.None, false)
+    .to({angle: 5}, 100, Phaser.Easing.Bounce.None, false)
+    .to({angle: 0}, 100, Phaser.Easing.Bounce.None, false)
+    .loop().start();
+  }
+
+  collapse() {
+    var target = {
+      x: this.position.x,
+      y: this.position.y + this.height * 0.5,
+      alpha: 0
+    };
+    if (this.tween != null) {
+      this.tween.stop();
+      this.tween = null;
+    }
+    this.tween = this.game.add.tween(this).to(target, 500, Phaser.Easing.Linear.None, true);
+    this.tween.onComplete.add(() => this.destroy(), this);
+    return this.tween;
   }
 
 }

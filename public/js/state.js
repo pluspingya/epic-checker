@@ -13,6 +13,16 @@ class State {
         [0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0],
         [1, 1, 1, 1, 1, 1, 1, 1],
+      ],
+      collapse: [
+        [26, 29, 32, 35, 38, 41, 44, 47],
+        [23, 62, 64, 66, 68, 70, 72, 50],
+        [20, 60, 78, 79, 80, 81, 74, 53],
+        [2, 58, 77, 83, 84, 82, 76, 56],
+        [56, 76, 82, 85, 83, 77, 58, 2],
+        [53, 74, 81, 80, 79, 78, 60, 20],
+        [50, 72, 70, 68, 66, 64, 62, 23],
+        [47, 44, 41, 38, 35, 32, 29, 26],
       ]
     }
   }
@@ -34,7 +44,10 @@ class State {
   }
 
   remove(coordinates) {
-    coordinates.forEach(coordinate => this.snap.map[coordinate.row][coordinate.column] = 0);
+    coordinates.forEach(coordinate => {
+      if (this.snap.turnCount < this.snap.collapse[coordinate.row][coordinate.column])
+        this.snap.map[coordinate.row][coordinate.column] = 0;
+    });
   }
 
   getPossibleMoves(table, {player, coordinate}) {
@@ -168,6 +181,14 @@ class State {
       }
     }
 
+    var collapseCoordinates = this.getQuakeAndCollapseCoodinates().collapseCoordinates;
+    collapseCoordinates.forEach(coordinate => {
+      if (this.snap.map[coordinate.row][coordinate.column] === 1 ||
+          this.snap.map[coordinate.row][coordinate.column] === 2)
+          victims.push(coordinate);
+      this.snap.map[coordinate.row][coordinate.column] = -1;
+    });
+
     ret = State.uniqueCoordinates(victims);
 
     return ret;
@@ -182,9 +203,27 @@ class State {
     return ret;
   }
 
+  getQuakeAndCollapseCoodinates() {
+    var ret = {
+      quakeCoordinates: [],
+      collapseCoordinates: []
+    };
+    for (let row = 0; row<this.snap.collapse.length; row++) {
+      for(let column = 0; column < this.snap.collapse[row].length; column++) {
+        if (this.snap.map[row][column] != -1 &&
+            this.snap.turnCount >= this.snap.collapse[row][column] - 2)
+          ret.quakeCoordinates.push({row, column});
+        if (this.snap.map[row][column] != -1 &&
+            this.snap.turnCount == this.snap.collapse[row][column])
+          ret.collapseCoordinates.push({row, column});
+      }
+    }
+    return ret;
+  }
+
   getTheWinner(table) {
     let possibleMoves = [0, 0];
-    
+
     for(let row=0; row<this.snap.map.length; row++) {
       for(let column=0; column<this.snap.map[row].length; column++) {
         for (let player=1; player<=2; player++) {

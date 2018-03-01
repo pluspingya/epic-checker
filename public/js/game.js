@@ -19,7 +19,7 @@ var selectedUnit = null, selectedTile = null;
 var possibleMoves = null;
 let table, state, units, guide, button;
 
-var game = new Phaser.Game(canvasSize.width, canvasSize.height, Phaser.AUTO, '', {
+var game = new Phaser.Game(canvasSize.width, canvasSize.height, Phaser.AUTO, 'canvas', {
   preload: preload,
   create: create,
   update: update,
@@ -55,6 +55,7 @@ function create() {
 
   guides = new Guides(game, table.group.guides);
 
+  table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
   units.stand(state.snap.player);
 }
 
@@ -107,14 +108,10 @@ function onTileClicked(tile) {
 function onMoveComplete() {
 
   state.move(selectedUnit, selectedTile);
-  // console.log("==== move ====");
-  // state.map.forEach(row => console.log(row));
+  table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
 
   var deadlist = state.getDeadList(selectedUnit);
-  var deadUnits = units.getTilesAtCoordinates(deadlist);
-  // console.log("==== deadlist ====");
-  // console.log(deadlist);
-  // console.log(deadUnits);
+  var deadUnits = units.getUnitsAtCoordinates(deadlist);
 
   var tween = units.kill(deadUnits);
   if (tween) {
@@ -125,23 +122,16 @@ function onMoveComplete() {
   }else {
     onRemoveComplete();
   }
+
 }
 
 function onRemoveComplete() {
   selectedUnit = null;
   selectedTile = null;
 
+
   units.stand(state.snap.player);
 
-  // var theWinner = units.units[0].length == 0 ? 2 : units.units[1].length == 0 ? 1 : 0; //state.getTheWinner(table);
-  // if (theWinner === 0) {
-  //   var possibleMoveTotal = 0;
-  //   units.units[state.snap.player-1].forEach(unit => {
-  //     possibleMoveTotal += state.getPossibleMoves(table, unit);
-  //   });
-  //   if (possibleMoveTotal == 0)
-  //     theWinner = state.player == 1 ? 2 : 1;
-  // }
   var theWinner = state.getTheWinner(table);
   if (theWinner > 0)
   {
@@ -153,6 +143,9 @@ function onRemoveComplete() {
 function onPlayAgain() {
   button.destroy();
   state.reset();
+  table.reset(state);
   units.reset(state);
+
+  table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
   units.stand(state.snap.player);
 }
