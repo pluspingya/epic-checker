@@ -1,0 +1,12 @@
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.2 @ 2018-03-01T11:17:51.719Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.2 @ 2018-03-01T11:17:51.720Z"}
+{"level":"notice","message":"pid: 48581","timestamp":"192.168.0.2 @ 2018-03-01T11:17:51.722Z"}
+{"level":"notice","message":"server ID: 192.168.0.2","timestamp":"192.168.0.2 @ 2018-03-01T11:17:51.722Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.2 @ 2018-03-01T11:17:51.722Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.2 @ 2018-03-01T11:17:51.723Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.0.2 @ 2018-03-01T11:17:51.726Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.2 @ 2018-03-01T11:17:52.564Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.2 @ 2018-03-01T11:17:55.679Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/state.js","requestedFile":"js/state.js","size":6412,"duration":2,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.2 @ 2018-03-01T11:18:17.342Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.2 @ 2018-03-01T11:18:17.709Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.2 @ 2018-03-01T11:36:11.590Z"}

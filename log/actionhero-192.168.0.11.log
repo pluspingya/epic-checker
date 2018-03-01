@@ -1,0 +1,170 @@
+{"message":"Redis connection `client` error","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)","code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":6379,"level":"error","timestamp":"192.168.0.11 @ 2018-02-20T11:34:08.884Z"}
+{"level":"error","message":"Unable to connect to Redis - please check your Redis config!","timestamp":"192.168.0.11 @ 2018-02-20T11:34:08.885Z"}
+{"message":"Redis connection `client` error","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)","code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":6379,"level":"error","timestamp":"192.168.0.11 @ 2018-02-20T11:34:13.891Z"}
+{"message":"Redis connection `client` error","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)","code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":6379,"level":"error","timestamp":"192.168.0.11 @ 2018-02-20T11:34:13.993Z"}
+{"message":"Redis connection `client` error","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)","code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":6379,"level":"error","timestamp":"192.168.0.11 @ 2018-02-20T11:34:14.143Z"}
+{"message":"Redis connection `client` error","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)","code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":6379,"level":"error","timestamp":"192.168.0.11 @ 2018-02-20T11:34:14.346Z"}
+{"message":"Redis connection `client` error","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)","code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":6379,"level":"error","timestamp":"192.168.0.11 @ 2018-02-20T11:34:14.598Z"}
+{"message":"Redis connection `client` error","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)","code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":6379,"level":"error","timestamp":"192.168.0.11 @ 2018-02-20T11:34:14.899Z"}
+{"message":"Redis connection `client` error","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)","code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":6379,"level":"error","timestamp":"192.168.0.11 @ 2018-02-20T11:34:15.251Z"}
+{"message":"Redis connection `client` error","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)","code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":6379,"level":"error","timestamp":"192.168.0.11 @ 2018-02-20T11:34:15.658Z"}
+{"message":"Redis connection `client` error","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)","code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":6379,"level":"error","timestamp":"192.168.0.11 @ 2018-02-20T11:34:16.109Z"}
+{"message":"Redis connection `client` error","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at Object._errnoException (util.js:1022:11)\n    at _exceptionWithHostPort (util.js:1044:20)\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)","code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":6379,"level":"error","timestamp":"192.168.0.11 @ 2018-02-20T11:34:16.614Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.11 @ 2018-02-20T11:35:41.476Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.11 @ 2018-02-20T11:35:41.478Z"}
+{"level":"notice","message":"pid: 27951","timestamp":"192.168.0.11 @ 2018-02-20T11:35:41.479Z"}
+{"level":"notice","message":"server ID: 192.168.0.11","timestamp":"192.168.0.11 @ 2018-02-20T11:35:41.479Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.11 @ 2018-02-20T11:35:41.479Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.11 @ 2018-02-20T11:35:41.480Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.0.11 @ 2018-02-20T11:35:41.483Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.11 @ 2018-02-20T11:35:42.259Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/index.html","requestedFile":"index.html","size":4798,"duration":8,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:35:51.457Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/javascript/ActionheroWebsocketClient.min.js","requestedFile":"javascript/ActionheroWebsocketClient.min.js","size":32774,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:35:51.540Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/css/cosmo.css","requestedFile":"css/cosmo.css","size":125619,"duration":3,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:35:51.541Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/logo/actionhero.png","requestedFile":"logo/actionhero.png","size":59273,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:35:51.546Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:35:52.773Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":71,"error":"TypeError: Cannot read property 'queue' of undefined","level":"info","message":"[ action @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:35:52.847Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"favicon.ico","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:35:56.133Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/index.html","requestedFile":"index.html","size":4798,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:36:01.647Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:36:01.725Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":31,"error":"TypeError: Cannot read property 'queue' of undefined","level":"info","message":"[ action @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:36:01.757Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/index.html","requestedFile":"index.html","size":4798,"duration":0,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:36:18.604Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:36:18.863Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":34,"error":"TypeError: Cannot read property 'queue' of undefined","level":"info","message":"[ action @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:36:18.898Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.11 @ 2018-02-20T11:36:55.929Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.11 @ 2018-02-20T11:42:50.455Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.11 @ 2018-02-20T11:42:50.456Z"}
+{"level":"notice","message":"pid: 28007","timestamp":"192.168.0.11 @ 2018-02-20T11:42:50.457Z"}
+{"level":"notice","message":"server ID: 192.168.0.11","timestamp":"192.168.0.11 @ 2018-02-20T11:42:50.457Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.11 @ 2018-02-20T11:42:50.458Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.11 @ 2018-02-20T11:42:50.458Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.0.11 @ 2018-02-20T11:42:50.461Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.11 @ 2018-02-20T11:42:51.268Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:42:54.083Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":65,"error":"TypeError: Cannot read property 'queue' of undefined","level":"info","message":"[ action @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:42:54.156Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/index.html","requestedFile":"index.html","size":504,"duration":5,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:42:57.185Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"javascript/phaser.min.js","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:42:57.242Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"javascript/game.js","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:42:57.244Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"css/cosmo.css","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:42:57.244Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"javascript/game.js","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:42:57.520Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"css/cosmo.css","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:43:13.854Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/index.html","requestedFile":"index.html","size":488,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:44:03.799Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"css/cosmo.css","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:44:03.818Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":261,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:44:03.820Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/phaser.min.js","requestedFile":"js/phaser.min.js","size":824392,"duration":10,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:44:03.828Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:44:06.185Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/index.html","requestedFile":"index.html","size":495,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:44:44.447Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:44:45.060Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/index.html","requestedFile":"index.html","size":523,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:46:23.800Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":239,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:46:23.831Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:46:24.200Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"favicon.ico","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:46:24.477Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/index.html","requestedFile":"index.html","size":518,"duration":0,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:46:42.368Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:46:42.936Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:48:07.656Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:49:44.096Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":316,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:59:17.388Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:59:17.764Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"res/sky.png","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:59:18.071Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/res/ground-air-tile.png","requestedFile":"res/ground-air-tile.png","size":186899,"duration":2,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:59:18.074Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:59:27.922Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"res/sky.png","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:59:27.999Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:59:39.082Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"res/sky.png","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:59:39.157Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:59:50.554Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":79,"error":"TypeError: Cannot read property 'queue' of undefined","level":"info","message":"[ action @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:59:50.635Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T11:59:57.564Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:00:09.477Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"res/sky.png","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:00:09.552Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":332,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:00:21.541Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:00:21.906Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"public/res/sky.jpg","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:00:22.167Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"public/res/ground-air-tile.png","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:00:22.167Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:00:44.954Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"public/res/sky.jpg","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:00:45.030Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"public/res/ground-air-tile.png","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:00:45.031Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:01:02.189Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"public/res/sky.jpg","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:01:02.259Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"public/res/ground-air-tile.png","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:01:02.261Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:01:17.080Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"public/res/sky.jpg","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:01:17.156Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"public/res/ground-air-tile.png","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:01:17.157Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.11 @ 2018-02-20T12:01:28.397Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.11 @ 2018-02-20T12:01:30.409Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.11 @ 2018-02-20T12:01:30.411Z"}
+{"level":"notice","message":"pid: 28188","timestamp":"192.168.0.11 @ 2018-02-20T12:01:30.412Z"}
+{"level":"notice","message":"server ID: 192.168.0.11","timestamp":"192.168.0.11 @ 2018-02-20T12:01:30.412Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.11 @ 2018-02-20T12:01:30.412Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.11 @ 2018-02-20T12:01:30.413Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.0.11 @ 2018-02-20T12:01:30.416Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.11 @ 2018-02-20T12:01:31.225Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":318,"duration":3,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:01:35.835Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:01:36.202Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/res/sky.jpg","requestedFile":"res/sky.jpg","size":243183,"duration":3,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:01:36.452Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:02:34.269Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":350,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:02:43.322Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:02:43.694Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":393,"duration":2,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:12:04.399Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:12:04.764Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/index.html","requestedFile":"index.html","size":516,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:12:24.655Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:12:25.235Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:13:04.503Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.11 @ 2018-02-20T12:13:08.680Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.11 @ 2018-02-20T12:13:10.650Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.11 @ 2018-02-20T12:13:10.651Z"}
+{"level":"notice","message":"pid: 28272","timestamp":"192.168.0.11 @ 2018-02-20T12:13:10.653Z"}
+{"level":"notice","message":"server ID: 192.168.0.11","timestamp":"192.168.0.11 @ 2018-02-20T12:13:10.653Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.11 @ 2018-02-20T12:13:10.653Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.11 @ 2018-02-20T12:13:10.654Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.0.11 @ 2018-02-20T12:13:10.657Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.11 @ 2018-02-20T12:13:11.475Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":391,"duration":4,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:13:12.916Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:13:13.288Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:13:25.607Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:13:33.525Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:13:36.680Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.11 @ 2018-02-20T12:13:40.363Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.11 @ 2018-02-20T12:13:42.424Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.11 @ 2018-02-20T12:13:42.425Z"}
+{"level":"notice","message":"pid: 28278","timestamp":"192.168.0.11 @ 2018-02-20T12:13:42.426Z"}
+{"level":"notice","message":"server ID: 192.168.0.11","timestamp":"192.168.0.11 @ 2018-02-20T12:13:42.426Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.11 @ 2018-02-20T12:13:42.427Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.11 @ 2018-02-20T12:13:42.427Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.0.11 @ 2018-02-20T12:13:42.430Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.11 @ 2018-02-20T12:13:43.278Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:13:45.782Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:13:48.404Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:13:57.613Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:14:01.215Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.11 @ 2018-02-20T12:14:02.964Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.11 @ 2018-02-20T12:14:04.704Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.11 @ 2018-02-20T12:14:04.705Z"}
+{"level":"notice","message":"pid: 28282","timestamp":"192.168.0.11 @ 2018-02-20T12:14:04.706Z"}
+{"level":"notice","message":"server ID: 192.168.0.11","timestamp":"192.168.0.11 @ 2018-02-20T12:14:04.706Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.11 @ 2018-02-20T12:14:04.706Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.11 @ 2018-02-20T12:14:04.707Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.0.11 @ 2018-02-20T12:14:04.711Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.11 @ 2018-02-20T12:14:05.537Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:14:07.448Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:14:09.705Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.11 @ 2018-02-20T12:14:11.502Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.11 @ 2018-02-20T12:14:17.182Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.11 @ 2018-02-20T12:14:17.183Z"}
+{"level":"notice","message":"pid: 28285","timestamp":"192.168.0.11 @ 2018-02-20T12:14:17.184Z"}
+{"level":"notice","message":"server ID: 192.168.0.11","timestamp":"192.168.0.11 @ 2018-02-20T12:14:17.185Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.11 @ 2018-02-20T12:14:17.185Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.11 @ 2018-02-20T12:14:17.186Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.0.11 @ 2018-02-20T12:14:17.189Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.11 @ 2018-02-20T12:14:18.005Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":395,"duration":3,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:14:19.531Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-20T12:14:19.916Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":397,"duration":2,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-21T08:55:57.712Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-21T08:55:58.106Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/res/ground-air-tile.png","requestedFile":"res/ground-air-tile.png","size":18960,"duration":2,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-21T08:55:58.386Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":444,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-21T08:57:06.614Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-21T08:57:07.023Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-21T08:57:17.998Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-21T08:57:29.066Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-21T08:57:31.271Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.11 @ 2018-02-21T08:57:40.351Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.11 @ 2018-02-21T08:57:47.043Z"}
