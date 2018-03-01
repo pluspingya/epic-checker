@@ -4,7 +4,7 @@ exports['default'] = {
   servers: {
     socket: (api) => {
       return {
-        enabled: (process.env.ENABLE_TCP_SERVER !== undefined),
+        enabled: false,//(process.env.ENABLE_TCP_SERVER !== undefined),
         // TCP or TLS?
         secure: false,
         // Passed to tls.createServer if secure=true. Should contain SSL certificates

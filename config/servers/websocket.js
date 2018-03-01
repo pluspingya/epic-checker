@@ -6,7 +6,7 @@ exports['default'] = {
   servers: {
     websocket: (api) => {
       return {
-        enabled: true,
+        enabled: false,
         // you can pass a FQDN (string) here or 'window.location.origin'
         clientUrl: 'window.location.origin',
         // Directory to render client-side JS.
