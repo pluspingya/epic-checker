@@ -20,7 +20,9 @@ class Table {
       units: null
     };
     this.tiles = null;
-    this.onTileClicked = null;
+    this.onTileClicked = [];
+
+    this.instantiate();
   }
 
   instantiate() {
@@ -44,8 +46,7 @@ class Table {
         }
         var tile = new Tile(game, row, column, this.group.tiles);
         tile.onClicked = (t) => {
-          if (this.onTileClicked)
-            this.onTileClicked(t);
+            this.onTileClicked.forEach(cb => cb(t));
         };
         this.tiles[row].push(tile);
       }

@@ -9,7 +9,9 @@ class Units {
     this.state = state;
     this.group = group;
     this.units = null;
-    this.onUnitClicked = null;
+    this.onUnitClicked = [];
+
+    this.instantiate();
   }
 
   instantiate() {
@@ -21,8 +23,7 @@ class Units {
           continue;
         let unit = new Unit(this.game, player, this.group);
         unit.onClicked = () => {
-          if (onUnitClicked!=null)
-            onUnitClicked(unit);
+          this.onUnitClicked.forEach(cb => cb(unit));
         };
         unit.warpToTile(table.tiles[row][column]);
         if (player == 1) {

@@ -17,7 +17,7 @@ var canvasSize = {
 
 var selectedUnit = null, selectedTile = null;
 var possibleMoves = null;
-let table, state, units, guide, button;
+let table, state, units, guide, player1, player2, button;
 
 var game = new Phaser.Game(canvasSize.width, canvasSize.height, Phaser.AUTO, 'canvas', {
   preload: preload,
@@ -41,22 +41,19 @@ function create() {
   game.add.sprite(0, 0, 'sky');
 
   state = new State();
-
   table = new Table(game, state);
-  table.instantiate();
   table.setPosition(
     canvasSize.width * 0.5 - table.getDisplaySize().width * 0.5,
     canvasSize.height * 0.5 - table.getDisplaySize().height * 0.5 + Tile.HalfSize().height);
-  table.onTileClicked = onTileClicked;
-
   units = new Units(game, state, table.group.units);
-  units.instantiate();
-  units.onUnitClicked = onUnitClicked;
-
   guides = new Guides(game, table.group.guides);
+  player1 = new PlayerInput(1, table, units, guides, onMakingAMove);
+  player2 = new PlayerInput(2, table, units, guides, onMakingAMove);
 
   table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
   units.stand(state.snap.player);
+  player1.setTurn(state.snap.player === 1, state);
+  player2.setTurn(state.snap.player === 2, state);
 }
 
 function update() {
@@ -64,7 +61,7 @@ function update() {
 }
 
 function render() {
-//  game.debug.inputInfo(32, 32);
+  game.debug.inputInfo(832, 32);
   for(let i=0; i<state.snap.map.length; i++)
     game.debug.text(state.snap.map[i], 32, 32 + i * 16);
   game.debug.text('Count : ' + state.snap.turnCount, 190, 32);
@@ -72,41 +69,18 @@ function render() {
   game.debug.text('Blue  : ' + units.units[1].length, 190, 32+16*2);
 }
 
-function onUnitClicked(unit) {
-  if (selectedTile != null) //unit still moving to this tile
-    return;
-
-  if (state.snap.player != unit.player)
-    return; //it's not your turn
-
+function onMakingAMove(unit, tile) {
   selectedUnit = unit;
-
-  possibleMoves = state.getPossibleMoves(table, selectedUnit);
-  guides.show(possibleMoves);
-}
-
-function onTileClicked(tile) {
-  if (selectedTile != null) //unit still moving to this tile
-    return;
-
-  if (selectedUnit == null)
-    return;
-
-  var canMove = possibleMoves && possibleMoves.find(p =>
-    p.coordinate.row == tile.coordinate.row &&
-    p.coordinate.column == tile.coordinate.column);
-  if (!canMove)
-    return;
-
   selectedTile = tile;
-  var tween = selectedUnit.tweenToTile(tile);
+
+  var tween = selectedUnit.tweenToTile(selectedTile);
   tween.onComplete.add(onMoveComplete, this);
 
-  guides.hide();
+  player1.setTurn(false);
+  player2.setTurn(false);
 }
 
 function onMoveComplete() {
-
   state.move(selectedUnit, selectedTile);
   table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
 
@@ -122,13 +96,11 @@ function onMoveComplete() {
   }else {
     onRemoveComplete();
   }
-
 }
 
 function onRemoveComplete() {
   selectedUnit = null;
   selectedTile = null;
-
 
   units.stand(state.snap.player);
 
@@ -137,7 +109,11 @@ function onRemoveComplete() {
   {
     button = game.add.button(game.world.centerX, game.world.centerY, 'player'+theWinner+'wins', onPlayAgain)
     button.anchor.set(0.5);
+    return;
   }
+
+  player1.setTurn(state.snap.player === 1, state);
+  player2.setTurn(state.snap.player === 2, state);
 }
 
 function onPlayAgain() {
@@ -148,4 +124,6 @@ function onPlayAgain() {
 
   table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
   units.stand(state.snap.player);
+  player1.setTurn(state.snap.player === 1, state);
+  player2.setTurn(state.snap.player === 2, state);
 }
