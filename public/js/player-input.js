@@ -1,22 +1,13 @@
 class PlayerInput extends Player {
   constructor(player, table, units, guides, onMakingAMove) {
-    super(player, table, units, guides);
+    super(player, table, units, guides, onMakingAMove);
     this.units.onUnitClicked.push(this.onUnitClicked.bind(this));
     this.table.onTileClicked.push(this.onTileClicked.bind(this));
-    this.onMakingAMove = onMakingAMove;
     this.selectedUnit = null;
     this.possibleMoves = null;
-    this.isMyTurn = false;
-    this.state = null;
-  }
-
-  setTurn(turn, state) {
-    this.isMyTurn = turn;
-    this.state = state;
   }
 
   onUnitClicked(unit) {
-
     if (!this.isMyTurn ||
         this.state.snap.player != unit.player)
       return; //it's not my turn
@@ -27,10 +18,8 @@ class PlayerInput extends Player {
   }
 
   onTileClicked(tile) {
-
     if (this.isMyTurn == false)
       return;
-
     if (this.selectedUnit == null)
       return;
 

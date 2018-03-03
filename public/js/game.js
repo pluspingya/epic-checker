@@ -48,7 +48,8 @@ function create() {
   units = new Units(game, state, table.group.units);
   guides = new Guides(game, table.group.guides);
   player1 = new PlayerInput(1, table, units, guides, onMakingAMove);
-  player2 = new PlayerInput(2, table, units, guides, onMakingAMove);
+//  player2 = new PlayerInput(2, table, units, guides, onMakingAMove);
+  player2 = new PlayerAI(2, table, units, guides, onMakingAMove);
 
   table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
   units.stand(state.snap.player);
