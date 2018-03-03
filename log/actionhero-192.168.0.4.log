@@ -798,3 +798,21 @@
 {"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-01T11:16:18.366Z"}
 {"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/state.js","requestedFile":"js/state.js","size":6649,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-01T11:16:36.855Z"}
 {"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-01T11:16:37.204Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.4 @ 2018-03-03T06:27:37.921Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.4 @ 2018-03-03T06:27:37.944Z"}
+{"level":"notice","message":"pid: 5101","timestamp":"192.168.0.4 @ 2018-03-03T06:27:37.954Z"}
+{"level":"notice","message":"server ID: 192.168.0.4","timestamp":"192.168.0.4 @ 2018-03-03T06:27:37.955Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.4 @ 2018-03-03T06:27:37.957Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.4 @ 2018-03-03T06:27:37.969Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.4 @ 2018-03-03T06:27:38.000Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:27:47.903Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:27:47.909Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/state.js","requestedFile":"js/state.js","size":14780,"duration":7,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:28:12.067Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:28:17.630Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:28:17.631Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/state.js","requestedFile":"js/state.js","size":14773,"duration":6,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:29:48.798Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:29:50.411Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:29:50.413Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/state.js","requestedFile":"js/state.js","size":14788,"duration":10,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:31:58.610Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:32:00.347Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:32:00.350Z"}

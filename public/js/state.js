@@ -35,50 +35,244 @@ class State {
     this.snap = State.DefaultSnap();
   }
 
-  move(unit, tile) {
-    this.snap.map[unit.coordinate.row][unit.coordinate.column] = 0;
-    this.snap.map[tile.coordinate.row][tile.coordinate.column] = unit.player;
+  static move(snap, unit, tile) {
+    snap.map[unit.coordinate.row][unit.coordinate.column] = 0;
+    snap.map[tile.coordinate.row][tile.coordinate.column] = unit.player;
     unit.coordinate = tile.coordinate;
-    this.snap.player = unit.player == 1 ? 2 : 1;
-    this.snap.turnCount ++;
+    snap.player = unit.player == 1 ? 2 : 1;
+    snap.turnCount ++;
   }
 
-  remove(coordinates) {
-    coordinates.forEach(coordinate => {
-      if (this.snap.turnCount < this.snap.collapse[coordinate.row][coordinate.column])
-        this.snap.map[coordinate.row][coordinate.column] = 0;
-    });
+  static getUnits(snap, player) {
+    var coordinates = [];
+    for(let row = 0; row<snap.map.length; row++) {
+      for (let column=0; column<snap.map[row].length; column++) {
+        if (snap.map[row][column] === player)
+          coordinates.push({ player, coordinate: { row, column }});
+      }
+    }
+    return coordinates;
   }
 
-  getPossibleMoves(table, {player, coordinate}) {
-    var ret = [];
+  static getPossibleMoves(snap, unit) {
+    var possibleMoves = [];
 
     //Up
-    for (let row = coordinate.row-1; row >= 0; row--) {
-      if (this.snap.map[row][coordinate.column] != 0)
+    for (let row = unit.coordinate.row-1; row >= 0; row--) {
+      if (snap.map[row][unit.coordinate.column] != 0)
         break;
-      ret.push(table.tiles[row][coordinate.column]);
+      possibleMoves.push({
+        unit,
+        tile: {
+          coordinate: { row, column: unit.coordinate.column }
+        }
+      });
     }
 
     //Down
-    for (let row = coordinate.row+1; row < this.snap.map.length; row++) {
-      if (this.snap.map[row][coordinate.column] != 0)
+    for (let row = unit.coordinate.row+1; row < snap.map.length; row++) {
+      if (snap.map[row][unit.coordinate.column] != 0)
         break;
-      ret.push(table.tiles[row][coordinate.column]);
+      possibleMoves.push({
+        unit,
+        tile: {
+          coordinate: { row, column: unit.coordinate.column }
+        }
+      });
     }
 
     //Left
-    for (let column = coordinate.column-1; column >= 0; column--) {
-      if (this.snap.map[coordinate.row][column] != 0)
+    for (let column = unit.coordinate.column-1; column >= 0; column--) {
+      if (snap.map[unit.coordinate.row][column] != 0)
         break;
-      ret.push(table.tiles[coordinate.row][column]);
+      possibleMoves.push({
+        unit,
+        tile: {
+          coordinate: { row : unit.coordinate.row, column }
+        }
+      });
     }
 
     //Right
-    for (let column = coordinate.column+1; column < this.snap.map[coordinate.row].length; column++) {
-      if (this.snap.map[coordinate.row][column] != 0)
+    for (let column = unit.coordinate.column+1; column < snap.map[unit.coordinate.row].length; column++) {
+      if (snap.map[unit.coordinate.row][column] != 0)
         break;
-      ret.push(table.tiles[coordinate.row][column]);
+      possibleMoves.push({
+        unit,
+        tile: {
+          coordinate: { row: unit.coordinate.row, column }
+        }
+      });
+    }
+
+    return possibleMoves;
+  }
+
+  static getDeadList(snap) {
+
+    var ret = [];
+    var victims = [];
+    var candidates = [];
+    var unitPlayer = snap.player == 1 ? 2 : 1;
+    var unitOpponent = snap.player; //player was a previous opponent
+
+    for(let row=0; row<snap.map.length; row++) {
+      for(let column=0; column<snap.map[row].length; column++) {
+        if (snap.map[row][column] == unitPlayer) {
+
+          let upCandidates = [];
+          let upImmediateFoundOpponent = true;
+          for(let moveup = 1; row - moveup >= 0; moveup ++) {
+            if (snap.map[row-moveup][column] == unitOpponent) {
+              upCandidates.push({row: row-moveup, column});
+              if (upImmediateFoundOpponent)
+                continue;
+            }
+            else if (snap.map[row-moveup][column] == unitPlayer && upCandidates.length > 0) {
+              victims = victims.concat(upCandidates);
+            }
+            else if (snap.map[row-moveup][column] == unitPlayer) {
+              upImmediateFoundOpponent = false;
+              continue;
+            }
+            break;
+          }
+
+          var downCandidates = [];
+          var downImmediateFoundOpponent = true;
+          for(let movedown = 1; row + movedown < snap.map.length; movedown ++) {
+            if (snap.map[row+movedown][column] == unitOpponent) {
+              downCandidates.push({row: row+movedown, column});
+              if (upImmediateFoundOpponent)
+                continue;
+            }
+            else if (snap.map[row+movedown][column] == unitPlayer && downCandidates.length > 0) {
+              victims = victims.concat(downCandidates);
+            }
+            else if (snap.map[row+movedown][column] == unitPlayer) {
+              upImmediateFoundOpponent = false;
+              continue;
+            }
+            break;
+          }
+
+          if (upCandidates.length > 0 && downCandidates.length > 0) {
+            victims.push(upCandidates[0]);
+            victims.push(downCandidates[0]);
+          }
+
+          let leftCandidates = [];
+          let leftImmediateFoundOpponent = true;
+          for(let moveleft = 1; column - moveleft >= 0; moveleft ++) {
+            if (snap.map[row][column-moveleft] == unitOpponent) {
+              leftCandidates.push({row, column: column - moveleft});
+              if (leftImmediateFoundOpponent)
+                continue;
+            }
+            else if (snap.map[row][column-moveleft] == unitPlayer && leftCandidates.length > 0) {
+              victims = victims.concat(leftCandidates);
+            }
+            else if (snap.map[row][column-moveleft] == unitPlayer) {
+              leftImmediateFoundOpponent = false;
+              continue;
+            }
+            break;
+          }
+
+          var rightCandidates = [];
+          var rightImmediateFoundOpponent = true;
+          for(let moveright = 1; column + moveright < snap.map[row].length; moveright ++) {
+            if (snap.map[row][column+ moveright] == unitOpponent) {
+              rightCandidates.push({row, column: column+ moveright});
+              if (rightImmediateFoundOpponent)
+                continue;
+            }
+            else if (snap.map[row][column+ moveright] == unitPlayer && rightCandidates.length > 0) {
+              victims = victims.concat(rightCandidates);
+            }
+            else if (snap.map[row][column+ moveright] == unitPlayer) {
+              rightImmediateFoundOpponent = false;
+              continue;
+            }
+            break;
+          }
+
+          if (leftCandidates.length > 0 && rightCandidates.length > 0) {
+            victims.push(leftCandidates[0]);
+            victims.push(rightCandidates[0]);
+          }
+
+        }
+      }
+    }
+
+    var collapseCoordinates = State.getQuakeAndCollapseCoodinates(snap).collapseCoordinates;
+    collapseCoordinates.forEach(coordinate => {
+      if (snap.map[coordinate.row][coordinate.column] === 1 ||
+          snap.map[coordinate.row][coordinate.column] === 2)
+          victims.push(coordinate);
+      snap.map[coordinate.row][coordinate.column] = -1;
+    });
+
+    ret = State.uniqueCoordinates(victims);
+
+    return ret;
+  }
+
+  static getQuakeAndCollapseCoodinates(snap) {
+    var ret = {
+      quakeCoordinates: [],
+      collapseCoordinates: []
+    };
+    for (let row = 0; row<snap.collapse.length; row++) {
+      for(let column = 0; column < snap.collapse[row].length; column++) {
+        if (snap.map[row][column] != -1 &&
+            snap.turnCount >= snap.collapse[row][column] - 2)
+          ret.quakeCoordinates.push({row, column});
+        if (snap.map[row][column] != -1 &&
+            snap.turnCount == snap.collapse[row][column])
+          ret.collapseCoordinates.push({row, column});
+      }
+    }
+    return ret;
+  }
+
+  static remove(snap, coordinates) {
+    coordinates.forEach(coordinate => {
+      if (snap.turnCount < snap.collapse[coordinate.row][coordinate.column])
+        snap.map[coordinate.row][coordinate.column] = 0;
+    });
+  }
+
+  getPossibleMoves(table, unit) {
+    var ret = [];
+
+    //Up
+    for (let row = unit.coordinate.row-1; row >= 0; row--) {
+      if (this.snap.map[row][unit.coordinate.column] != 0)
+        break;
+      ret.push({unit, tile: table.tiles[row][unit.coordinate.column] });
+    }
+
+    //Down
+    for (let row = unit.coordinate.row+1; row < this.snap.map.length; row++) {
+      if (this.snap.map[row][unit.coordinate.column] != 0)
+        break;
+      ret.push({unit, tile: table.tiles[row][unit.coordinate.column]});
+    }
+
+    //Left
+    for (let column = unit.coordinate.column-1; column >= 0; column--) {
+      if (this.snap.map[unit.coordinate.row][column] != 0)
+        break;
+      ret.push({unit, tile: table.tiles[unit.coordinate.row][column]});
+    }
+
+    //Right
+    for (let column = unit.coordinate.column+1; column < this.snap.map[unit.coordinate.row].length; column++) {
+      if (this.snap.map[unit.coordinate.row][column] != 0)
+        break;
+      ret.push({unit, tile: table.tiles[unit.coordinate.row][column]});
     }
 
     return ret;
@@ -239,6 +433,24 @@ class State {
       return 1;
 
     return 0; //no winner yet
+  }
+
+  static getPoint(snap) {
+    var point = 0;
+    var unit = snap.player === 1 ? 2 : 1;
+    snap.map.forEach(row => row.forEach(n => {
+      if (n <= 0)
+        return;
+      var isMyUnit = n === unit;
+      point += isMyUnit ? 2 : -1;
+    }));
+    // if (point != 8) {
+    //   console.log('getPoint for player:', unit );
+    //   snap.map.forEach(row => console.log(row));
+    //   console.log(point);
+    // }
+
+    return point;
   }
 
 }

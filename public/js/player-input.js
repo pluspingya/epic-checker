@@ -14,7 +14,9 @@ class PlayerInput extends Player {
 
     this.selectedUnit = unit;
     this.possibleMoves = this.state.getPossibleMoves(this.table, this.selectedUnit);
-    this.guides.show(this.possibleMoves);
+    var tiles = [];
+    this.possibleMoves.forEach(move => tiles.push(move.tile));
+    this.guides.show(tiles);
   }
 
   onTileClicked(tile) {
@@ -23,9 +25,9 @@ class PlayerInput extends Player {
     if (this.selectedUnit == null)
       return;
 
-    var canMove = this.possibleMoves && this.possibleMoves.find(p =>
-      p.coordinate.row == tile.coordinate.row &&
-      p.coordinate.column == tile.coordinate.column);
+    var canMove = this.possibleMoves && this.possibleMoves.find(move =>
+      move.tile.coordinate.row == tile.coordinate.row &&
+      move.tile.coordinate.column == tile.coordinate.column);
     if (!canMove)
       return;
 

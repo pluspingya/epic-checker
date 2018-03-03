@@ -48,8 +48,9 @@ function create() {
   units = new Units(game, state, table.group.units);
   guides = new Guides(game, table.group.guides);
   player1 = new PlayerInput(1, table, units, guides, onMakingAMove);
-//  player2 = new PlayerInput(2, table, units, guides, onMakingAMove);
-  player2 = new PlayerAI(2, table, units, guides, onMakingAMove);
+  //player2 = new PlayerInput(2, table, units, guides, onMakingAMove);
+  //player2 = new PlayerAI(2, table, units, guides, onMakingAMove);
+  player2 = new PlayerAIPrunning(2, table, units, guides, onMakingAMove);
 
   table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
   units.stand(state.snap.player);
@@ -82,7 +83,7 @@ function onMakingAMove(unit, tile) {
 }
 
 function onMoveComplete() {
-  state.move(selectedUnit, selectedTile);
+  State.move(state.snap, selectedUnit, selectedTile);
   table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
 
   var deadlist = state.getDeadList(selectedUnit);
@@ -91,7 +92,7 @@ function onMoveComplete() {
   var tween = units.kill(deadUnits);
   if (tween) {
     tween.onComplete.add(() => {
-      state.remove(deadlist);
+      State.remove(state.snap, deadlist);
       onRemoveComplete();
     }, this);
   }else {
