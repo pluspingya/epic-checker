@@ -1,3 +1,5 @@
+'use strict'
+
 class State {
 
   static DefaultSnap() {
@@ -315,3 +317,5 @@ class State {
     return ret;
   }
 }
+
+module.exports = State;

@@ -49,10 +49,9 @@ function create() {
   guides = new Guides(game, table.group.guides);
   player1 = new PlayerInput(1, table, units, guides, onMakingAMove);
   //player2 = new PlayerInput(2, table, units, guides, onMakingAMove);
-  //player2 = new PlayerAI(2, table, units, guides, onMakingAMove);
-  player2 = new PlayerAIPrunning(2, table, units, guides, onMakingAMove);
+  player2 = new PlayerAI(2, table, units, guides, onMakingAMove);
 
-  table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
+  table.quakeAndCollapse(State.getQuakeAndCollapseCoodinates(state.snap));
   units.stand(state.snap.player);
   player1.setTurn(state.snap.player === 1, state);
   player2.setTurn(state.snap.player === 2, state);
@@ -72,8 +71,8 @@ function render() {
 }
 
 function onMakingAMove(unit, tile) {
-  selectedUnit = unit;
-  selectedTile = tile;
+  selectedUnit = units.getUnitsAtCoordinates([unit.coordinate])[0];// unit;
+  selectedTile = table.getTileAtCoordinate(tile.coordinate);// tile;
 
   var tween = selectedUnit.tweenToTile(selectedTile);
   tween.onComplete.add(onMoveComplete, this);
@@ -84,9 +83,9 @@ function onMakingAMove(unit, tile) {
 
 function onMoveComplete() {
   State.move(state.snap, selectedUnit, selectedTile);
-  table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
+  table.quakeAndCollapse(State.getQuakeAndCollapseCoodinates(state.snap));
 
-  var deadlist = state.getDeadList(selectedUnit);
+  var deadlist = State.getDeadList(state.snap, selectedUnit);
   var deadUnits = units.getUnitsAtCoordinates(deadlist);
 
   var tween = units.kill(deadUnits);
@@ -106,7 +105,7 @@ function onRemoveComplete() {
 
   units.stand(state.snap.player);
 
-  var theWinner = state.getTheWinner(table);
+  var theWinner = State.getTheWinner(state.snap);
   if (theWinner > 0)
   {
     button = game.add.button(game.world.centerX, game.world.centerY, 'player'+theWinner+'wins', onPlayAgain)

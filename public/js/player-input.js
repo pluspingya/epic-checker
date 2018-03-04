@@ -13,9 +13,10 @@ class PlayerInput extends Player {
       return; //it's not my turn
 
     this.selectedUnit = unit;
-    this.possibleMoves = this.state.getPossibleMoves(this.table, this.selectedUnit);
-    var tiles = [];
-    this.possibleMoves.forEach(move => tiles.push(move.tile));
+    this.possibleMoves = State.getPossibleMoves(this.state.snap, this.selectedUnit);// this.state.getPossibleMoves(this.table, this.selectedUnit);
+    var tileCoordinates = [];
+    this.possibleMoves.forEach(move => tileCoordinates.push(move.tile.coordinate));
+    var tiles = this.table.getTilesAtCoordinates(tileCoordinates);
     this.guides.show(tiles);
   }
 

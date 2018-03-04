@@ -816,3 +816,58 @@
 {"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/state.js","requestedFile":"js/state.js","size":14788,"duration":10,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:31:58.610Z"}
 {"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:32:00.347Z"}
 {"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T06:32:00.350Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.4 @ 2018-03-03T07:33:50.584Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.4 @ 2018-03-03T07:33:53.065Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.4 @ 2018-03-03T07:33:53.067Z"}
+{"level":"notice","message":"pid: 5852","timestamp":"192.168.0.4 @ 2018-03-03T07:33:53.068Z"}
+{"level":"notice","message":"server ID: 192.168.0.4","timestamp":"192.168.0.4 @ 2018-03-03T07:33:53.068Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.4 @ 2018-03-03T07:33:53.068Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.4 @ 2018-03-03T07:33:53.069Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.4 @ 2018-03-03T07:33:53.072Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"actions/GetBestMove","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:34:42.721Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"favicon.ico","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:34:43.391Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"actions/getBestMove","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:34:47.331Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"getBestMove","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:34:50.932Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"action\":\"getBestMove\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:34:59.348Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/index.html","requestedFile":"index.html","size":1157,"duration":3,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:38:10.932Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":4061,"duration":1,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:38:10.990Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:38:11.377Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:38:11.383Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"action\":\"getBestMove\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:38:11.716Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.4 @ 2018-03-03T07:41:02.452Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.4 @ 2018-03-03T07:41:04.532Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.4 @ 2018-03-03T07:41:04.533Z"}
+{"level":"notice","message":"pid: 5922","timestamp":"192.168.0.4 @ 2018-03-03T07:41:04.534Z"}
+{"level":"notice","message":"server ID: 192.168.0.4","timestamp":"192.168.0.4 @ 2018-03-03T07:41:04.534Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.4 @ 2018-03-03T07:41:04.534Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.4 @ 2018-03-03T07:41:04.535Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.4 @ 2018-03-03T07:41:04.538Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":4075,"duration":3,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:41:09.000Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:41:09.352Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:41:09.357Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"action\":\"getBestMove\",\"apiVersion\":1}","duration":2,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:41:09.699Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:41:18.854Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:41:18.859Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"action\":\"getBestMove\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:41:19.191Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.4 @ 2018-03-03T07:43:27.393Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.4 @ 2018-03-03T07:43:29.402Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.4 @ 2018-03-03T07:43:29.403Z"}
+{"level":"notice","message":"pid: 5943","timestamp":"192.168.0.4 @ 2018-03-03T07:43:29.404Z"}
+{"level":"notice","message":"server ID: 192.168.0.4","timestamp":"192.168.0.4 @ 2018-03-03T07:43:29.404Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.4 @ 2018-03-03T07:43:29.405Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.4 @ 2018-03-03T07:43:29.405Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.4 @ 2018-03-03T07:43:29.409Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:43:33.274Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:43:33.278Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"action\":\"getBestMove\",\"apiVersion\":1}","duration":3,"error":"Error: snap is a required parameter for this action","level":"info","message":"[ action @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:43:33.672Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:44:05.648Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:44:05.652Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"action\":\"getBestMove\",\"apiVersion\":1}","duration":1,"error":"Error: snap is a required parameter for this action","level":"info","message":"[ action @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:44:05.986Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:44:28.195Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:44:28.200Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"action\":\"getBestMove\",\"apiVersion\":1}","duration":0,"error":"Error: snap is a required parameter for this action","level":"info","message":"[ action @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:44:28.326Z"}
+{"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":4092,"duration":3,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:45:00.590Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:45:00.960Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:45:00.965Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"action\":\"getBestMove\",\"apiVersion\":1}","duration":0,"error":"Error: snap is a required parameter for this action","level":"info","message":"[ action @ web ]","timestamp":"192.168.0.4 @ 2018-03-03T07:45:01.287Z"}
+{"level":"notice","message":"stopping process...","timestamp":"192.168.0.4 @ 2018-03-03T13:08:35.084Z"}

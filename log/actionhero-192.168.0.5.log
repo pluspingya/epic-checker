@@ -342,3 +342,17 @@
 {"to":"127.0.0.1","file":"/Users/pluspingya/Workspace/projects/epic-checker/public/js/game.js","requestedFile":"js/game.js","size":1287,"duration":2,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.5 @ 2018-02-21T13:17:18.199Z"}
 {"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.5 @ 2018-02-21T13:17:18.566Z"}
 {"level":"notice","message":"stopping process...","timestamp":"192.168.0.5 @ 2018-02-21T13:21:48.636Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.0.5 @ 2018-03-04T12:29:08.183Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.0.5 @ 2018-03-04T12:29:08.184Z"}
+{"level":"notice","message":"pid: 14646","timestamp":"192.168.0.5 @ 2018-03-04T12:29:08.185Z"}
+{"level":"notice","message":"server ID: 192.168.0.5","timestamp":"192.168.0.5 @ 2018-03-04T12:29:08.185Z"}
+{"level":"notice","message":"redis is disabled","timestamp":"192.168.0.5 @ 2018-03-04T12:29:08.185Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.0.5 @ 2018-03-04T12:29:08.186Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.0.5 @ 2018-03-04T12:29:08.189Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/phaser.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.5 @ 2018-03-04T12:29:16.831Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"js/underscore-min.map","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.0.5 @ 2018-03-04T12:29:16.838Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"snap\":\"{\\\"player\\\":2,\\\"turnCount\\\":1,\\\"map\\\":[[2,2,2,2,2,2,2,2],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,\",\"action\":\"getBestMove\",\"apiVersion\":1}","duration":3734,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.5 @ 2018-03-04T12:29:22.633Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"snap\":\"{\\\"player\\\":2,\\\"turnCount\\\":3,\\\"map\\\":[[0,2,2,2,2,2,2,2],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,\",\"action\":\"getBestMove\",\"apiVersion\":1}","duration":2630,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.5 @ 2018-03-04T12:29:32.249Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"snap\":\"{\\\"player\\\":2,\\\"turnCount\\\":5,\\\"map\\\":[[0,2,2,2,2,2,2,2],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0],[2,0,0,0,0,0,\",\"action\":\"getBestMove\",\"apiVersion\":1}","duration":2438,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.5 @ 2018-03-04T12:29:37.858Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"snap\":\"{\\\"player\\\":2,\\\"turnCount\\\":7,\\\"map\\\":[[2,2,2,2,2,2,2,2],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,\",\"action\":\"getBestMove\",\"apiVersion\":1}","duration":1796,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.5 @ 2018-03-04T12:29:49.190Z"}
+{"to":"127.0.0.1","action":"getBestMove","params":"{\"snap\":\"{\\\"player\\\":2,\\\"turnCount\\\":9,\\\"map\\\":[[2,0,2,2,2,2,2,2],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,\",\"action\":\"getBestMove\",\"apiVersion\":1}","duration":2036,"level":"info","message":"[ action @ web ]","timestamp":"192.168.0.5 @ 2018-03-04T12:29:53.800Z"}

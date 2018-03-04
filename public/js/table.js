@@ -91,6 +91,10 @@ class Table {
     return null;
   }
 
+  getTileAtCoordinate(coordinate) {
+    return this.tiles[coordinate.row][coordinate.column];
+  }
+  
   getTilesAtCoordinates(coordinates) {
     let ret = [];
     coordinates.forEach(coordinate => ret.push(this.tiles[coordinate.row][coordinate.column]));

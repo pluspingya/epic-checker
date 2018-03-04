@@ -1,3 +1,8 @@
+'use strict'
+
+const {Action, api} = require('actionhero');
+const State = require('../classes/game-state');
+
 const PrunningInfinityValue = 99999999;
 
 class PrunningNode {
@@ -9,34 +14,49 @@ class PrunningNode {
   }
 }
 
-class PlayerAIPrunning extends Player {
-  constructor(player, table, units, guides, onMakingAMove) {
-    super(player, table, units, guides, onMakingAMove);
+module.exports = class GetBestMove extends Action {
+  constructor() {
+    super();
+    this.name = 'getBestMove';
+    this.description = 'I will give you the best move possible!';
+    this.inputs = {
+      snap: {
+        required: true,
+        validator: this.snapValidator
+      }
+    }
+    this.outputExample = {
+      move: {
+        unit: { coordinate: { row: 0, column: 0 } },
+        tile: { coordinate: { row: 1, column: 0 } }
+      }
+    };
   }
 
-  setTurn(turn, state) {
-    super.setTurn(turn, state);
+  snapValidator(param) {
+    var snap = JSON.parse(param);
+    if (typeof(snap.map) !== 'object')
+      throw new Error('missing snap.map');
+    if (typeof(snap.collapse) !== 'object')
+      throw new Error('missing snap.collapse');
+    if (typeof(snap.player) !== 'number')
+      throw new Error('missing snap.player');
+    if (typeof(snap.turnCount) !== 'number')
+      throw new Error('missing snap.turnCount');
+  }
 
-    if (!this.isMyTurn)
-      return;
+  async run(data) {
+    var snap = JSON.parse(data.params.snap);
 
-    var myUnits = this.units.units[this.player-1];
-    var tmpUnits = [].concat(myUnits);
-    var selectedUnit = null;
-    var selectedTile = null;
-    var snap = JSON.parse(JSON.stringify(state.snap));
-    // console.log("==== initial ====");
-    // snap.map.forEach(row => console.log(row));
+    let tmpUnits = State.getPlayerUnits(snap);
+    let move = this.getGreatMove(snap, tmpUnits);
 
-    let greatMove = this.getGreatMove(snap, tmpUnits);
-    var tile = this.table.getTileAtCoordinate(greatMove.tile.coordinate);
-
-    this.onMakingAMove(greatMove.unit, tile);
+    data.response.move = move;
   }
 
   getGreatMove(snap, units) {
     let possibleMoves = [];
-    units.forEach(unit => possibleMoves = possibleMoves.concat(State.getPossibleMoves(this.state.snap, unit)));
+    units.forEach(unit => possibleMoves = possibleMoves.concat(State.getPossibleMoves(snap, unit)));
     // console.log('possibleMoves:');
     // possibleMoves.forEach(move => console.log('from', move.unit.coordinate, ' to ', move.tile.coordinate));
     if (possibleMoves.length == 0)
@@ -46,7 +66,7 @@ class PlayerAIPrunning extends Player {
     var possibleMovesOrderByValue = {};
     for(let i=0; i<possibleMoves.length; i++) {
       var move = possibleMoves[i];
-      let value = PlayerAIPrunning.getValue(snap, move.unit, move.tile, new PrunningNode(true), false, 2);
+      let value = GetBestMove.getValue(snap, move.unit, move.tile, new PrunningNode(true), false, 2);
       if (!possibleMovesOrderByValue[value])
         possibleMovesOrderByValue[value] = [];
       possibleMovesOrderByValue[value].push(move);
@@ -81,7 +101,7 @@ class PlayerAIPrunning extends Player {
     for(var i=0; i<possibleMoves.length; i++) {
       var unit = possibleMoves[i].unit;
       var tile = possibleMoves[i].tile;
-      let value = PlayerAIPrunning.getValue(nextSnap, unit, tile, nextNode, !isMaximizer, dept-1);
+      let value = GetBestMove.getValue(nextSnap, unit, tile, nextNode, !isMaximizer, dept-1);
 
       if (nextNode.isMaximizer) {
         if (nextNode.value < value)

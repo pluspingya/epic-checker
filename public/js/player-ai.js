@@ -9,28 +9,21 @@ class PlayerAI extends Player {
     if (!this.isMyTurn)
       return;
 
-    var myUnits = this.units.units[this.player-1];
-    var tmpUnits = [].concat(myUnits);
-    var selectedUnit = null;
-    var selectedTile = null;
+    this.httpGet('/api/getBestMove', state.snap, (response) => {
+      var res = JSON.parse(response);
+      this.onMakingAMove(res.move.unit, res.move.tile);
+    });
+  }
 
-    while(tmpUnits.length > 0) {
-      var randomIndex = parseInt(Math.random() * tmpUnits.length);
-      selectedUnit = tmpUnits[randomIndex];
-      tmpUnits.splice(randomIndex, 1);
-      var possibleMoves = this.state.getPossibleMoves(this.table, selectedUnit);
-      if (possibleMoves.length == 0)
-        continue;
-      selectedTile = possibleMoves[parseInt(Math.random() * possibleMoves.length)];
-      break;
-    }
-
-    if (selectedUnit === null || selectedTile === null)
-    {
-      console.error('no possible moves found for player '+ this.player);
-      return;
-    }
-
-    this.onMakingAMove(selectedUnit, selectedTile);
+  httpGet(theUrl, snap, callback) {
+    var xmlHttp = new XMLHttpRequest();
+      xmlHttp.onreadystatechange = function() {
+          if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+              callback(xmlHttp.responseText);
+      }
+      xmlHttp.open("POST", theUrl, true); // true for asynchronous
+      var data = new FormData();
+      data.append('snap', JSON.stringify(snap));
+      xmlHttp.send(data);
   }
 }
