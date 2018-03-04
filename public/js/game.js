@@ -123,7 +123,7 @@ function onPlayAgain() {
   table.reset(state);
   units.reset(state);
 
-  table.quakeAndCollapse(state.getQuakeAndCollapseCoodinates());
+  table.quakeAndCollapse(State.getQuakeAndCollapseCoodinates(state.snap));
   units.stand(state.snap.player);
   player1.setTurn(state.snap.player === 1, state);
   player2.setTurn(state.snap.player === 2, state);
