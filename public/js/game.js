@@ -17,7 +17,11 @@ var canvasSize = {
 
 var selectedUnit = null, selectedTile = null;
 var possibleMoves = null;
-let table, state, units, guide, player1, player2, button;
+let table, state, units, guide, player1, player2, playAgainButton;
+
+const PvP = 0;
+const PvC = 1;
+const CvC = 2;
 
 var game = new Phaser.Game(canvasSize.width, canvasSize.height, Phaser.AUTO, 'canvas', {
   preload: preload,
@@ -35,6 +39,10 @@ function preload() {
   Table.preload(game);
   Units.preload(game);
   Guides.preload(game);
+
+  slickUI = game.plugins.add(Phaser.Plugin.SlickUI);
+  slickUI.load('res/ui/kenney/kenney.json');
+  game.load.image('menu-button', 'res/ui/menu.png');
 }
 
 function create() {
@@ -47,9 +55,31 @@ function create() {
     canvasSize.height * 0.5 - table.getDisplaySize().height * 0.5 + Tile.HalfSize().height);
   units = new Units(game, state, table.group.units);
   guides = new Guides(game, table.group.guides);
-  player1 = new PlayerInput(1, table, units, guides, onMakingAMove);
-  //player2 = new PlayerInput(2, table, units, guides, onMakingAMove);
-  player2 = new PlayerAI(2, table, units, guides, onMakingAMove);
+
+  createMenu();
+}
+
+function start(mode) {
+
+  state.reset();
+  table.reset(state);
+  units.reset(state);
+
+  switch(mode) {
+    default:
+    case PvP: {
+      player1 = new PlayerInput(1, table, units, guides, onMakingAMove);
+      player2 = new PlayerInput(2, table, units, guides, onMakingAMove);
+    }break;
+    case PvC: {
+      player1 = new PlayerInput(1, table, units, guides, onMakingAMove);
+      player2 = new PlayerAI(2, table, units, guides, onMakingAMove);
+    }break;
+    case CvC: {
+      player1 = new PlayerAI(1, table, units, guides, onMakingAMove);
+      player2 = new PlayerAI(2, table, units, guides, onMakingAMove);
+    }break;
+  }
 
   table.quakeAndCollapse(State.getQuakeAndCollapseCoodinates(state.snap));
   units.stand(state.snap.player);
@@ -62,12 +92,12 @@ function update() {
 }
 
 function render() {
-  game.debug.inputInfo(832, 32);
-  for(let i=0; i<state.snap.map.length; i++)
-    game.debug.text(state.snap.map[i], 32, 32 + i * 16);
-  game.debug.text('Count : ' + state.snap.turnCount, 190, 32);
-  game.debug.text('Red   : ' + units.units[0].length, 190, 32+16*1);
-  game.debug.text('Blue  : ' + units.units[1].length, 190, 32+16*2);
+  // game.debug.inputInfo(832, 32);
+  // for(let i=0; i<state.snap.map.length; i++)
+  //   game.debug.text(state.snap.map[i], 32, 32 + i * 16);
+  // game.debug.text('Count : ' + state.snap.turnCount, 190, 32);
+  // game.debug.text('Red   : ' + units.units[0].length, 190, 32+16*1);
+  // game.debug.text('Blue  : ' + units.units[1].length, 190, 32+16*2);
 }
 
 function onMakingAMove(unit, tile) {
@@ -108,8 +138,8 @@ function onRemoveComplete() {
   var theWinner = State.getTheWinner(state.snap);
   if (theWinner > 0)
   {
-    button = game.add.button(game.world.centerX, game.world.centerY, 'player'+theWinner+'wins', onPlayAgain)
-    button.anchor.set(0.5);
+    playAgainButton = game.add.button(game.world.centerX, game.world.centerY, 'player'+theWinner+'wins', onPlayAgain)
+    playAgainButton.anchor.set(0.5);
     return;
   }
 
@@ -118,7 +148,7 @@ function onRemoveComplete() {
 }
 
 function onPlayAgain() {
-  button.destroy();
+  playAgainButton.destroy();
   state.reset();
   table.reset(state);
   units.reset(state);

@@ -1,3 +1,6 @@
+let AI_API_HOST_1 = '/api/getBestMove';
+let AI_API_HOST_2 = '/api/getBestMove';
+
 class PlayerAI extends Player {
   constructor(player, table, units, guides, onMakingAMove) {
     super(player, table, units, guides, onMakingAMove);
@@ -9,7 +12,7 @@ class PlayerAI extends Player {
     if (!this.isMyTurn)
       return;
 
-    this.httpGet('/api/getBestMove', state.snap, (response) => {
+    this.httpGet(this.player === 2 ? AI_API_HOST_2 : AI_API_HOST_1, state.snap, (response) => {
       var res = JSON.parse(response);
       this.onMakingAMove(res.move.unit, res.move.tile);
     });
